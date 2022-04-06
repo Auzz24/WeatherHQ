@@ -1,10 +1,11 @@
 var inputCity = document.querySelector("#cityName")
 var warning = document.querySelector(".warning")
-
+var searchResults = []
 function searchCity(city) {
     fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
         .then(response => {
-            localStorage.setItem("city", JSON.stringify(city));
+            searchResults.push(city)
+            localStorage.setItem("city", JSON.stringify(searchResults));
             return response.json()
         })
         .then(response => {
@@ -28,6 +29,9 @@ function searchCity(city) {
                     document.querySelector("#current").textContent = current
                     document.querySelector("#temp").textContent = temp
                     document.querySelector("#uvi").textContent = uvi
+                    if(uvi>4){
+                        document.querySelector("#uvi").classList.add("warning")
+                    }
                     document.querySelector("#humidity").textContent = humidity
                     document.querySelector("#wind").textContent = wind
 

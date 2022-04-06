@@ -3,7 +3,6 @@
     --secondary-color: #f9fafb;
     --tertiary-color:#646751; 
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +10,12 @@
 }
 header{
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#search{
+    padding-right: 20%;
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -28,6 +33,9 @@ body {
     border: solid 5px var(--tertiary-color);
     background-color: var(--primary-color);
 }
+.warning { 
+    background-color: red;
+    }
 div {
     padding: 20px 35px;
     justify-content: space-between;
