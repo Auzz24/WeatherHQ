@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #40824b;
+    --secondary-color: #f9fafb;
+    --tertiary-color:#646751; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+#forcast {
+    display: flex;
+    flex-wrap: wrap;
+}
+#forcast div {
+    margin: 10px;
+    border: solid 5px var(--tertiary-color);
+    background-color: var(--primary-color);
+}
+div {
+    padding: 20px 35px;
+    justify-content: space-between;
+}
+
+div h3{
+    padding: 5px;
+}
+
