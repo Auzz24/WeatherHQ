@@ -6,6 +6,7 @@ function searchCity(city) {
         .then(response => {
             searchResults.push(city)
             localStorage.setItem("city", JSON.stringify(searchResults));
+            // document.querySelector("#searchResult").textContent = city
             return response.json()
         })
         .then(response => {
@@ -60,12 +61,6 @@ searchButton.addEventListener("click", function () {
     searchCity(inputCity.value)
 });
 
-function changeBackground(backgroundColor){
-    if (warning >= 4){
-        backgroundColor = "red";
-    }
-}
 
 // function loadCity ()
 
-changeBackground()

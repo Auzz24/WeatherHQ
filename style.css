@@ -1,7 +1,7 @@
 :root {
     --primary-color: #40824b;
-    --secondary-color: #f9fafb;
-    --tertiary-color:#646751; 
+    --secondary-color: rgb(179, 147, 106) ;
+    --tertiary-color: #f9fafb; 
 }
 *{
     margin: 0;
@@ -9,13 +9,8 @@
     box-sizing: border-box;
 }
 header{
+    color: var(--tertiary-color);
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-#search{
-    padding-right: 20%;
-    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -23,22 +18,59 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    border: solid 20px var(--primary-color);
+}
+#top{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+#search{
+    margin-left: 10%;
+    width: 200px;
+    padding-right: 20%;
+    padding-top: 10px;
+    background-color: var(--primary-color);
+   border: solid 15px var(--tertiary-color);
+}
+#currentWeather{
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10%;
+    padding-right: 20%;
+    padding-top: 10px;
+    border: solid 15px var(--tertiary-color);
+    background-color: var(--primary-color);
+}
+#bottom{
+    padding-top: 10px;
+}
+section h2{
+    color: var(--tertiary-color);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 #forcast {
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--secondary-color);
 }
 #forcast div {
-    margin: 10px;
-    border: solid 5px var(--tertiary-color);
+    margin: 1px;
+    border: solid 15px var(--tertiary-color);
     background-color: var(--primary-color);
 }
 .warning { 
     background-color: red;
     }
 div {
-    padding: 20px 35px;
-    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
 }
 
 div h3{

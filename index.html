@@ -13,14 +13,16 @@
     <header>
         <h1>Weather HQ</h1>
     </header>
-    <section id="search">
-        <div>
+    <section id="top">
+        <div id="search" class="line">
             <input id="cityName" type="text" placeholder="Search..">
             <button id="searchButton">Search</button>
+            <div #searchResult></div>
+            <div></div>
+            <div></div>
             </select>
         </div>
-    <section id="curretWeather">
-        <div>
+        <div id="currentWeather" class="line">
             <h3>Current Weather: <span id="current" class="answer"></span></h3>
             <h3>Current Temp: <span id="temp"></span></h3>
             <h3>Current UV index: <span id="uvi" ></span></h3>
@@ -28,9 +30,9 @@
             <h3>Current Wind: <span id="wind"></span></h3>
         </div>
     </section>
-    </section>
-        <h2>5 day Forcast</h2>
-        <section id="forcast">
+    <section id="bottom">
+        <h2>5 Day Forcast</h2>
+        <div id="forcast">
         <div>
             <h3>Max Temperature: <span id="maxTemp1"></span></h3>
             <h3>Min Temperature: <span id="minTemp1"></span></h3>
@@ -66,7 +68,7 @@
             <h3>Humidity: <span id="humidity5"></span></h3>
             <h3>Wind: <span id="wind5"></span></h3>
         </div>
-
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
