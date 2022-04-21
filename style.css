@@ -2,6 +2,7 @@
     --primary-color: #40824b;
     --secondary-color: rgb(179, 147, 106) ;
     --tertiary-color: #f9fafb; 
+    text-decoration: none;
 }
 *{
     margin: 0;

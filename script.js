@@ -1,12 +1,17 @@
 var inputCity = document.querySelector("#cityName")
 var warning = document.querySelector(".warning")
 var searchResults = []
+
 function searchCity(city) {
+    var searchList = document.querySelector("#searchList")
+    var searchItem = document.createElement("li")
+
     fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
         .then(response => {
             searchResults.push(city)
             localStorage.setItem("city", JSON.stringify(searchResults));
-            // document.querySelector("#searchResult").textContent = city
+            searchItem.textContent= searchResults[0]
+            searchList.appendChild(searchItem);
             return response.json()
         })
         .then(response => {
@@ -55,7 +60,6 @@ function searchCity(city) {
             console.error(err);
         })
 }
-
 
 searchButton.addEventListener("click", function () {
     searchCity(inputCity.value)
