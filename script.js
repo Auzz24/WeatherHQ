@@ -6,7 +6,7 @@ function searchCity(city) {
     var searchList = document.querySelector("#searchList")
     var searchItem = document.createElement("li")
 
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
         .then(response => {
             searchResults.push(city)
             localStorage.setItem("city", JSON.stringify(searchResults));
@@ -20,7 +20,7 @@ function searchCity(city) {
             var lat = response[0].lat
             var lon = response[0].lon
 
-            fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely&units=imperial&appid=b3353fc64354c9fbf62bd339178f2411")
+            fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely&units=imperial&appid=b3353fc64354c9fbf62bd339178f2411")
                 .then(response => {
                     return response.json()
                 })
