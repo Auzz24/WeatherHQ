@@ -6,7 +6,7 @@ function searchCity(city) {
     var searchList = document.querySelector("#searchList")
     var searchItem = document.createElement("li")
 
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b3353fc64354c9fbf62bd339178f2411")
         .then(response => {
             searchResults.push(city)
             localStorage.setItem("city", JSON.stringify(searchResults));

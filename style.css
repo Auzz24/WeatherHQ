@@ -69,8 +69,11 @@ section h2{
 .lightWarning{
     background-color: yellow;
 }
+.nothing{
+    background-color: var(--primary-color);
+}
 #searchList{
-    padding: 5pxw;
+    padding: 5px;
 }
 div {
     padding-left: 5px;
