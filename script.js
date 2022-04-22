@@ -10,7 +10,7 @@ function searchCity(city) {
         .then(response => {
             searchResults.push(city)
             localStorage.setItem("city", JSON.stringify(searchResults));
-            searchItem.textContent= searchResults[0]
+            searchItem.textContent= city;
             searchList.appendChild(searchItem);
             return response.json()
         })
@@ -35,8 +35,11 @@ function searchCity(city) {
                     document.querySelector("#current").textContent = current
                     document.querySelector("#temp").textContent = temp
                     document.querySelector("#uvi").textContent = uvi
-                    if(uvi>4){
+                    if(uvi>6){
                         document.querySelector("#uvi").classList.add("warning")
+                    }
+                    else if (uvi>3){
+                        document.querySelector("#uvi").classList.add("lightWarning")
                     }
                     document.querySelector("#humidity").textContent = humidity
                     document.querySelector("#wind").textContent = wind
@@ -50,6 +53,12 @@ function searchCity(city) {
                         document.querySelector("#maxTemp"+i).textContent = maxTemp
                         document.querySelector("#minTemp"+i).textContent = minTemp
                         document.querySelector("#uvi"+i).textContent = uviForcast
+                        if(uvi>6){
+                            document.querySelector("#uvi"+i).classList.add("warning")
+                        }
+                        else if (uvi>3){
+                            document.querySelector("#uvi"+i).classList.add("lightWarning")
+                        }
                         document.querySelector("#humidity"+i).textContent = humidityForcast
                         document.querySelector("#wind"+i).textContent = windForcast
                     }
