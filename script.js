@@ -35,11 +35,12 @@ function searchCity(city) {
                     document.querySelector("#current").textContent = current
                     document.querySelector("#temp").textContent = temp
                     document.querySelector("#uvi").textContent = uvi
-                    if(uvi>6){
-                        document.querySelector("#uvi").classList.add("warning")
-                    }
-                    else if (uvi>3){
+                    console.log(uvi);
+                    if(uvi>=3 && uvi<=6){
                         document.querySelector("#uvi").classList.add("lightWarning")
+                    }
+                    else if (uvi>=6){
+                        document.querySelector("#uvi").classList.add("warning")
                     }
                     document.querySelector("#humidity").textContent = humidity
                     document.querySelector("#wind").textContent = wind
@@ -53,12 +54,12 @@ function searchCity(city) {
                         document.querySelector("#maxTemp"+i).textContent = maxTemp
                         document.querySelector("#minTemp"+i).textContent = minTemp
                         document.querySelector("#uvi"+i).textContent = uviForcast
-                        if(uvi>6){
-                            document.querySelector("#uvi"+i).classList.add("warning")
-                        }
-                        else if (uvi>3){
-                            document.querySelector("#uvi"+i).classList.add("lightWarning")
-                        }
+                        // if(uvi===6){
+                        //     document.querySelector("#uvi"+i).classList.add("warning")
+                        // }
+                        // else if (uvi>3){
+                        //     document.querySelector("#uvi"+i).classList.add("lightWarning")
+                        // }
                         document.querySelector("#humidity"+i).textContent = humidityForcast
                         document.querySelector("#wind"+i).textContent = windForcast
                     }
