@@ -36,10 +36,10 @@ function searchCity(city) {
                     document.querySelector("#temp").textContent = temp
                     document.querySelector("#uvi").textContent = uvi
                     console.log(uvi);
-                    if(uvi>=3 && uvi<=6){
+                    if(uvi>=3 && uvi<=6.9){
                         document.querySelector("#uvi").classList.add("lightWarning")
                     }
-                    else if (uvi>=6){
+                    else if (uvi>=7){
                         document.querySelector("#uvi").classList.add("warning")
                     }
                     document.querySelector("#humidity").textContent = humidity
@@ -54,12 +54,12 @@ function searchCity(city) {
                         document.querySelector("#maxTemp"+i).textContent = maxTemp
                         document.querySelector("#minTemp"+i).textContent = minTemp
                         document.querySelector("#uvi"+i).textContent = uviForcast
-                        // if(uvi===6){
-                        //     document.querySelector("#uvi"+i).classList.add("warning")
-                        // }
-                        // else if (uvi>3){
-                        //     document.querySelector("#uvi"+i).classList.add("lightWarning")
-                        // }
+                        if(uviForcast>=3 && uviForcast<=6.9){
+                            document.querySelector("#uvi"+i).classList.add("lightWarning")
+                        }
+                        else if (uviForcast>7){
+                            document.querySelector("#uvi"+i).classList.add("warning")
+                        }
                         document.querySelector("#humidity"+i).textContent = humidityForcast
                         document.querySelector("#wind"+i).textContent = windForcast
                     }
